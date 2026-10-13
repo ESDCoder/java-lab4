@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.esdcoder.lab4.FurnitureController">
+    <children>
+        <Label layoutX="20.0" layoutY="20.0" text="Furniture Calculator"/>
+        <TextField fx:id="furnitureTypeField" layoutX="20.0" layoutY="60.0" promptText="Type"/>
+        <TextField fx:id="materialField" layoutX="20.0" layoutY="100.0" promptText="Material"/>
+        <TextField fx:id="pricePerCubicField" layoutX="20.0" layoutY="140.0" promptText="Price per 1m^3"/>
+        <TextField fx:id="dimensionsField" layoutX="20.0" layoutY="180.0" promptText="Dimensions (m^3)"/>
+        <Button text="Calculate Cost" onAction="#handleCalculate" layoutX="20.0" layoutY="230.0"/>
+        <Label fx:id="costLabel" layoutX="20.0" layoutY="280.0" text="Cost: "/>
+        <Button text="Print Info" onAction="#handlePrintInfo" layoutX="20.0" layoutY="320.0"/>
+    </children>
+</AnchorPane>

@@ -26,6 +26,14 @@ public class ParallelogramApplication extends Application {
         stage.setTitle("Parallelogram Calculator");
         stage.setScene(scene);
         stage.show();
+
+        // Launch second window for Furniture Calculation
+        FXMLLoader furnitureLoader = new FXMLLoader(ParallelogramApplication.class.getResource("furniture-view.fxml"));
+        Scene furnitureScene = new Scene(furnitureLoader.load(), 600, 400);
+        Stage furnitureStage = new Stage();
+        furnitureStage.setTitle("Furniture Calculator");
+        furnitureStage.setScene(furnitureScene);
+        furnitureStage.show();
     }
 
     /**

@@ -22,14 +22,13 @@ public class Calculator {
     }
 
     /**
-     * Saves the calculation result to a file in the project root.
-     *
-     * @param result The area to save.
-     * @throws IOException If an error occurs while writing to the file.
-     */
-    public static void saveResult(double result) throws IOException {
+      * Saves the calculation result to a file in the project root.
+      *
+      * @param result The result to save.
+      */
+    public static void saveResult(String result) throws IOException {
         try (FileWriter writer = new FileWriter("result.txt")) {
-            writer.write("Area: " + result);
+            writer.write(result);
         }
     }
 }

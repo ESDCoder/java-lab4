@@ -76,9 +76,9 @@ public class ParallelogramController {
             double a = Double.parseDouble(sideAField.getText());
             double b = Double.parseDouble(sideBField.getText());
             double alpha = Double.parseDouble(alphaField.getText());
-
+            
             double result = Calculator.calculateParallelogramArea(a, b, alpha);
-            Calculator.saveResult(result);
+            Calculator.saveResult(String.format("Area: %.2f", result));
             resultLabel.setText("Result saved to result.txt");
         } catch (NumberFormatException e) {
             resultLabel.setText("Error: Invalid input");
