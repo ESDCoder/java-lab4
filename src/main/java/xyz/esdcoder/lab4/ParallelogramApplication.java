@@ -7,7 +7,18 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Main application class for the Parallelogram Calculator.
+ * It initializes the primary stage and loads the FXML view.
+ */
 public class ParallelogramApplication extends Application {
+    /**
+     * Starts the JavaFX application.
+     * Loads the FXML file and sets up the scene.
+     *
+     * @param stage The primary stage for the application.
+     * @throws IOException If there is an error loading the FXML file.
+     */
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(ParallelogramApplication.class.getResource("parallelogram-view.fxml"));
@@ -17,6 +28,11 @@ public class ParallelogramApplication extends Application {
         stage.show();
     }
 
+    /**
+     * Main entry point for the application.
+     *
+     * @param args Command line arguments.
+     */
     public static void main(String[] args) {
         launch(args);
     }
