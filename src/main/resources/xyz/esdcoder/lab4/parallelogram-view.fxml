@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.esdcoder.lab4.ParallelogramController" prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="File">
+                    <items>
+                        <MenuItem text="New Calculation" onAction="#handleNewCalculation"/>
+                        <MenuItem text="Save" onAction="#handleSave"/>
+                        <MenuItem text="Exit" onAction="#handleExit"/>
+                    </items>
+                </Menu>
+                <Menu text="Help">
+                    <items>
+                        <MenuItem text="About Program" onAction="#handleAbout"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <GridPane hgap="10" vgap="10">
+            <children>
+                <Label text="Side a:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <TextField fx:id="sideAField" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                <Label text="Side b:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <TextField fx:id="sideBField" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                <Label text="Angle (alpha):" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <TextField fx:id="alphaField" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                <Button text="Calculate" onAction="#handleCalculate" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2" />
+                <Label text="Result:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+                <Label fx:id="resultLabel" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+    </center>
+</BorderPane>
